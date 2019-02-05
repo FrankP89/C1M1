@@ -24,8 +24,8 @@
 #include "stats.h"
 
 /* Size of the Data Set */
-
 #define SIZE (40)
+
 
 void main() {
 
@@ -35,13 +35,64 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */  
+  /* Other Variable Declarations Go Here */
+  char *address = &test[0];
    
   /* Statistics and Printing Functions Go Here */
   
- 
+  print_statistics(address,SIZE);	// Printing initial statistics
+
+  find_median(address,SIZE);		// Finding median
+  find_mean(address,SIZE);		// Finding mean
+  find_maximum(address,SIZE);		// Finding maximum
+  find_minimum(address,SIZE);		// Finding minimum
 }
 
 /* Add other Implementation File Code Here */
 
+unsigned char print_statistics(unsigned char *array, unsigned int arraylength){
+
+
+
+printf("Unsigned character pointers\n");
+printf("Array Pointer: %p\n" , &array[0]); // Utilize %p to display pointer addresses
+printf("The value in the pointer [20]: %d\n\n" , array[20]); // Utilize %d to display the digits in ptr
+
+print_array(array, arraylength);
+sort_array(array, arraylength);		// Sort Array (Using pointers and no new variables)
+print_array(array, arraylength);	// Print sorted array
+
+return array;
+}
+
+
+unsigned char print_array(unsigned char* array, unsigned int arraylength){
+
+return array;
+}
+
+unsigned char find_median(unsigned char* array, unsigned int arraylength){
+
+return array;
+}
+
+unsigned char find_mean(unsigned char* array, unsigned int arraylength){
+
+return array;
+}
+
+unsigned char find_maximum(unsigned char* array, unsigned int arraylength){
+
+return array;
+}
+
+unsigned char find_minimum(unsigned char* array, unsigned int arraylength){
+
+return array;
+}
+
+unsigned char sort_array(unsigned char* array, unsigned int arraylength){
+
+return array;
+}
 
