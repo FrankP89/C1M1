@@ -9,15 +9,16 @@
  *
  *****************************************************************************/
 /**
- * @file <stats.c> 
- * @brief <Simple statistics for data manipulation. Data is provided is the form of array>
- *	  <Utilization of pointers, and other concepts are seen here.>
- * 
+ * @file <Add File Name> 
+ * @brief <Add Brief Description Here >
  *
- * @author <Walter F Pintor O>
- * @date <5th Feb 2019>
+ * <Add Extended Description Here>
+ *
+ * @author <Add FirsName LastName>
+ * @date <Add date >
  *
  */
+
 
 
 #include <stdio.h>
@@ -25,6 +26,8 @@
 
 /* Size of the Data Set */
 #define SIZE (40)
+
+
 
 
 void main() {
@@ -67,31 +70,91 @@ return array;
 
 
 unsigned char print_array(unsigned char* array, unsigned int arraylength){
+int i = 0;		// For/loop counter
+int counter = 1;	// Counter of elements
+int rowWidth = 8;	// Width of array
+
+
+printf("Array of numbers: \n");
+printf("	");
+for (i = 0 ; i < arraylength ; i ++) {
+
+	printf(" %d", array[i]);
+	if ( ((counter%rowWidth) == 0) && (i!=0)){ // Formatting row sizes
+		printf(" 	\n"); 		   // Providing spaces to the right
+		if (counter/arraylength!=1){       // Checking if it is the last element
+		printf("	");
+		}
+	}
+	counter++;
+}
+
+printf("\n");
 
 return array;
 }
 
 unsigned char find_median(unsigned char* array, unsigned int arraylength){
+float median = 0;
+
+if (arraylength%2==0){
+	printf("The array median values are: %d" , (array[(arraylength-1)/2]) );
+	printf(" and %d\n" , (array[(arraylength)/2]) );
+	median =  ( (  (float)(array[(arraylength-1)/2]) + (float)(array[(arraylength)/2]) ) / 2);	// Always ensure the correct parsing is chosen
+} else {
+	printf("The array median values are: %d" , (array[(arraylength-1)/2]) );	// Convert from int to double if required
+}
+
+printf("The median number: %.2f\n" ,median);	// %f for float numbers - %.2f indicates the number of digits to show
 
 return array;
 }
 
 unsigned char find_mean(unsigned char* array, unsigned int arraylength){
+int i = 0;
+float sum = 0;
+float mean = 0;
+for ( i = 0; i < arraylength; i++){
+	sum = array[i] + sum;
+}
+mean = sum/(float)arraylength;
+printf("The mean is: %.2f\n" , mean);
 
 return array;
 }
 
 unsigned char find_maximum(unsigned char* array, unsigned int arraylength){
 
+printf("The maximum is: %.2f\n" , (float)array[arraylength-1]);
+
 return array;
 }
 
 unsigned char find_minimum(unsigned char* array, unsigned int arraylength){
 
+printf("The minimum is: %.2f\n\n" , (float)array[0]);
+
 return array;
 }
 
 unsigned char sort_array(unsigned char* array, unsigned int arraylength){
+
+int i = 0;
+int j = 0;
+int tempNum = 0;
+
+for (i = 0; i < arraylength; i++){
+
+	for (j = i+1; j < arraylength; j++){
+	
+		if (array[i] > array[j]) { 
+                    tempNum =  array[i];
+                    array[i] = array[j];
+                    array[j] = tempNum; 
+                }
+	}
+}
+
 
 return array;
 }

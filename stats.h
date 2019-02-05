@@ -9,12 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <stats.h> 
- * @brief <Header for declaration of functions in stats.c>
- *	   
+ * @file <Add File Name> 
+ * @brief <Add Brief Description Here >
  *
- * @author <Walter F Pintor O>
- * @date <5th Feb 2019>
+ * <Add Extended Description Here>
+ *
+ * @author <Add FirsName LastName>
+ * @date <Add date >
  *
  */
 #ifndef __STATS_H__
