@@ -9,13 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file <stats.c> 
+ * @brief <Simple statistics for data manipulation. Data is provided is the form of array>
+ *	  <Utilization of pointers, and other concepts are seen here.>
+ * 
  *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author <Walter F Pintor O>
+ * @date <5th Feb 2019>
  *
  */
 
